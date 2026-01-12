@@ -1,0 +1,168 @@
+/* ===============================
+   ADMIN PANEL THEME
+================================= */
+
+body {
+  background: radial-gradient(circle at top, #1c1f24, #0b0b0b);
+  min-height: 100vh;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* ✅ Login wrapper center */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+}
+
+/* ✅ Login card */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  animation: fadeUp 0.6s ease;
+}
+
+.login-card h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Dashboard */
+#dashboardSection {
+  max-width: 1200px;
+  margin: auto;
+  animation: fadeUp 0.6s ease;
+}
+
+/* Table */
+.table {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.table thead {
+  background: #0d6efd;
+  color: white;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* Table improvements for small screens */
+.table th, .table td {
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .table th, .table td {
+    font-size: 13px;
+  }
+}
+
+/* Search bar + sort responsive */
+#searchBox {
+  min-width: 230px;
+}
+#sortSelect {
+  min-width: 190px;
+}
+
+@media (max-width: 576px) {
+  #searchBox, #sortSelect {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .login-card {
+    padding: 18px;
+    border-radius: 14px;
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===============================
+   PRO ANIMATIONS
+================================= */
+
+.fade-in {
+  animation: fadeIn 0.55s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.55s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+.slide-down {
+  animation: slideDown 0.45s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+.pop {
+  animation: pop 0.35s cubic-bezier(.2,1.4,.3,1) forwards;
+}
+
+.glow-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.glow-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.45);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Button click feel */
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Smooth */
+* { scroll-behavior: smooth; }
+
+.game-filter.active {
+  background: #0d6efd;
+  border-color: #0d6efd;
+  color: white;
+}
+
+
+.loader-row {
+  padding: 18px 0;
+}
+
+.loader-spinner {
+  width: 28px;
+  height: 28px;
+}
